@@ -1,2 +1,463 @@
-<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1080px;overflow:hidden;background:radial-gradient(circle at 50% 0,#193b38,#071512 58%,#030807);font-family:Arial,sans-serif;color:#effff5}.stage{height:100%;padding:72px 80px;position:relative}.ey{color:#72e0a4;letter-spacing:6px;font-weight:bold;font-size:22px}.hero{margin-top:180px}.hero h1{font-size:86px;line-height:1;letter-spacing:-4px;margin:18px 0;color:#fff}.hero h1 span{color:#72e0a4}.hero p{font-size:28px;color:#a9cdb9;line-height:1.45;max-width:760px}.badge{margin-top:42px;display:inline-block;border:1px solid #3b8062;border-radius:99px;padding:14px 24px;color:#a8f4c3;font-weight:bold;letter-spacing:2px}.scene{position:absolute;inset:0;padding:72px 80px;opacity:0;visibility:hidden}.scene h2{font-size:52px;margin:180px 0 42px;letter-spacing:-2px}.scene p{font-size:25px;color:#a9cdb9;line-height:1.5}.card{background:#0d2620;border:1px solid #28614b;border-radius:18px;padding:28px;margin-top:34px;display:flex;align-items:center;gap:24px}.icon{width:70px;height:70px;border-radius:16px;background:#174b38;display:grid;place-items:center;font-size:34px}.card b{font-size:24px}.card small{display:block;color:#83aa96;margin-top:8px;font-size:17px}.flow{display:flex;align-items:center;justify-content:space-between;margin-top:80px}.node{width:190px;text-align:center}.node .icon{margin:auto}.node b{display:block;margin-top:14px;font-size:18px}.arrow{color:#72e0a4;font-size:40px}.pill{position:absolute;bottom:130px;left:80px;border:1px solid #47a477;border-radius:99px;padding:13px 22px;color:#9af0b9;font-weight:bold}.trace{margin-top:40px;border-left:2px solid #28614b;padding-left:28px}.event{padding:16px 0;border-bottom:1px dashed #28503f;font-family:monospace;color:#b1d7c0;font-size:19px}.event i{display:inline-block;width:10px;height:10px;background:#72e0a4;border-radius:50%;margin-right:14px}.order{width:680px;margin-top:35px;background:#f5faf6;color:#173526;padding:28px;border-radius:18px}.line{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #d5e3d9;font-size:20px}.total{display:flex;justify-content:space-between;padding-top:24px;font-size:28px;font-weight:bold}.pay{margin-top:26px;background:#173526;color:#fff;padding:16px 25px;border-radius:9px;display:inline-block;font-weight:bold}.outro{padding-top:300px;text-align:center}.outro h2{font-size:72px;margin:25px 0}.outro p{max-width:760px;margin:auto}.scene.active{opacity:1;visibility:visible}@keyframes fade{0%{opacity:0;transform:translateY(18px)}15%,82%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-10px)}}@keyframes show1{0%,100%{opacity:1}90%{opacity:1}}
-</style><style>.arch{margin-top:60px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:center}.arch .node{width:auto;background:#0d2620;border:1px solid #28614b;border-radius:14px;padding:22px 14px}.arch .node b{font-size:19px}.arch .node small{display:block;color:#83aa96;font-size:14px;margin-top:7px}.arch .arrow{font-size:34px;text-align:center}.seq{margin-top:55px;border:1px solid #28614b;border-radius:16px;padding:22px 26px;background:#0b211b}.lane{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;border-bottom:1px solid #315b48;padding:16px 0;color:#b9dfc6;font:16px monospace}.lane b{color:#72e0a4}.lane span{color:#9bbdab}</style><style>@keyframes nodePulse{0%,100%{transform:translateY(0);box-shadow:0 0 0 #72e0a400}50%{transform:translateY(-8px);box-shadow:0 12px 30px #72e0a433}}@keyframes arrowFlow{0%{opacity:.25;transform:translateX(-8px)}50%{opacity:1}100%{opacity:.25;transform:translateX(8px)}}@keyframes rowIn{to{opacity:1;transform:none}}@keyframes scan{0%{width:0}100%{width:100%}}@keyframes usePulse{0%,100%{border-color:#28614b}50%{border-color:#72e0a4;box-shadow:0 0 22px #72e0a422}}.arch .node{animation:nodePulse 2.4s ease-in-out infinite}.arch .node:nth-child(1){animation-delay:.1s}.arch .node:nth-child(3){animation-delay:.45s}.arch .node:nth-child(4){animation-delay:.8s}.arch .node:nth-child(6){animation-delay:1.15s}.arch .arrow{animation:arrowFlow 1.2s ease-in-out infinite}.seq .lane{opacity:0;transform:translateX(-20px);animation:rowIn .65s ease forwards}.seq .lane:nth-child(2){animation-delay:.45s}.seq .lane:nth-child(3){animation-delay:.9s}.seq .lane:nth-child(4){animation-delay:1.35s}.usecases{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}.usecase{background:#0d2620;border:1px solid #28614b;border-radius:14px;padding:22px;animation:usePulse 2.8s ease-in-out infinite}.usecase:nth-child(2){animation-delay:.5s}.usecase:nth-child(3){animation-delay:1s}.usecase:nth-child(4){animation-delay:1.5s}.usecase b{display:block;color:#fff;font-size:20px}.usecase span{display:block;color:#83aa96;margin-top:9px;font-size:15px}.usecase em{display:inline-block;color:#72e0a4;font:13px monospace;margin-top:14px;font-style:normal}.usebar{height:3px;background:#28614b;margin-top:24px;position:relative}.usebar:after{content:"";position:absolute;height:100%;background:#72e0a4;animation:scan 2.2s ease-in-out infinite}</style></head><body><div class="stage"><section id="s1" class="scene active"><div class="ey">CLAUDE COMMERCE / ZOHO CATALYST</div><div class="hero"><h1>From intent<br>to <span>paid.</span></h1><p>A headless commerce agent that makes every decision and payment event visible.</p><div class="badge">TRANSACTION LAB · STRIPE TEST MODE</div></div></section><section id="s2" class="scene"><div class="ey">01 / CUSTOMER INTENT</div><h2>“Build me a home-office setup under ₹25,000.”</h2><div class="card"><div class="icon">✦</div><div><b>Claude interprets the request</b><small>budget · category · multi-item planning</small></div></div><div class="flow"><div class="node"><div class="icon">⌕</div><b>Search catalogue</b></div><div class="arrow">→</div><div class="node"><div class="icon">◈</div><b>Compare options</b></div><div class="arrow">→</div><div class="node"><div class="icon">▣</div><b>Propose cart</b></div></div></section><section id="s3" class="scene"><div class="ey">02 / AGENT TOOL CALLS</div><h2>Reasoning becomes inspectable.</h2><p>Claude calls safe, server-side tools. Catalyst executes them against the catalogue and records the trace.</p><div class="trace"><div class="event"><i></i>search_products <span>completed · 3 matches</span></div><div class="event"><i></i>get_product_details <span>completed · prices verified</span></div><div class="event"><i></i>propose_cart <span>completed · ₹23,490</span></div></div><div class="pill">NO INVENTED PRICES · SERVER-REPRICED</div></section><section id="s4" class="scene"><div class="ey">03 / CHECKOUT</div><h2>Customer confirms. Stripe takes over.</h2><div class="order"><div class="line"><span>Desk + ergonomic chair + lamp</span><b>₹23,490</b></div><div class="line"><span>Payment provider</span><b>Stripe Checkout</b></div><div class="total"><span>Total</span><span>₹23,490</span></div><div class="pay">✓ Checkout Session created</div></div></section><section id="s6" class="scene"><div class="ey">05 / CATALYST ARCHITECTURE</div><h2>Four services. One controlled transaction.</h2><div class="arch"><div class="node"><div class="icon">◉</div><b>Slate UI</b><small>React + Vite</small></div><div class="arrow">→</div><div class="node"><div class="icon">λ</div><b>Advanced I/O</b><small>commerce function</small></div><div class="node"><div class="icon">▤</div><b>Data Store</b><small>orders + traces</small></div><div class="arrow">→</div><div class="node"><div class="icon">$</div><b>Stripe</b><small>Checkout + webhook</small></div></div><div class="pill">SECRETS STAY SERVER-SIDE</div></section><section id="s7" class="scene"><div class="ey">06 / REQUEST SEQUENCE</div><h2>What happens after “Buy”?</h2><div class="seq"><div class="lane"><b>1 · Customer</b><span>confirms cart</span><span>→</span><span>consent recorded</span></div><div class="lane"><b>2 · Catalyst</b><span>reprices server-side</span><span>→</span><span>creates order</span></div><div class="lane"><b>3 · Stripe</b><span>Checkout Session</span><span>→</span><span>payment completed</span></div><div class="lane"><b>4 · Webhook</b><span>signature verified</span><span>→</span><span>order = paid</span></div></div><div class="pill">IDEMPOTENT · AUDITABLE · TRACEABLE</div></section><section id="s8" class="scene"><div class="ey">07 / BUSINESS PATTERNS</div><h2>One agent loop. Many domains.</h2><p>Keep the model flexible; keep the business tools deterministic.</p><div class="usecases"><div class="usecase"><b>Retail</b><span>Discover → compare → buy</span><em>catalog · cart · checkout</em></div><div class="usecase"><b>Travel</b><span>Plan → price → reserve</span><em>inventory · policy · booking</em></div><div class="usecase"><b>Subscriptions</b><span>Upgrade → prorate → renew</span><em>entitlements · billing · webhook</em></div><div class="usecase"><b>B2B procurement</b><span>Quote → approve → order</span><em>limits · approvals · audit</em></div></div><div class="usebar"></div><div class="pill">MODEL DECIDES · SYSTEM ENFORCES</div></section><section id="s5" class="scene"><div class="outro"><div class="ey">04 / OBSERVABILITY</div><h2>Paid, with proof.</h2><p>Webhook confirmation updates the order and the live timeline shows the complete transaction lifecycle.</p><div class="badge">CATALYST · CLAUDE · STRIPE</div></div></section></div><script>const scenes=[...document.querySelectorAll('.scene')];let i=0;setInterval(()=>{scenes[i].classList.remove('active');i=(i+1)%scenes.length;scenes[i].classList.add('active')},7000)</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body {
+    width:1080px; height:1080px; overflow:hidden;
+    background: radial-gradient(1200px 900px at 50% 8%, #0d3038 0%, #061519 45%, #030a0d 100%);
+    font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:#fff;
+  }
+  .stage { position:relative; width:1080px; height:1080px; }
+  .scene { position:absolute; inset:0; opacity:0; }
+  #s1 { opacity:1; }
+
+  .scene-title { position:absolute; top:64px; left:0; right:0; text-align:center; opacity:0; }
+  .scene-title .l1 { font-size:22px; font-weight:800; letter-spacing:5px; color:#22d3ee; }
+  .scene-title .l2 { font-size:42px; font-weight:800; margin-top:8px; }
+
+  /* ---------- SCENE 1 : TITLE CARD ---------- */
+  .tc-eyebrow { position:absolute; top:380px; left:0; right:0; text-align:center;
+    font-size:30px; font-weight:800; letter-spacing:8px; color:#22d3ee; opacity:0; }
+  .tc-badge { position:absolute; top:440px; left:50%; transform:translateX(-50%) scale(0.4);
+    width:76px; height:76px; border-radius:20px; background:linear-gradient(135deg,#22d3ee,#0e7490);
+    display:flex; align-items:center; justify-content:center; box-shadow:0 18px 44px rgba(34,211,238,0.45); opacity:0; }
+  .tc-badge svg { width:38px; height:38px; }
+  .tc-title { position:absolute; top:540px; left:0; right:0; text-align:center; opacity:0; }
+  .tc-title .big { font-size:96px; font-weight:800; letter-spacing:-1px; }
+  .tc-tagline { position:absolute; top:660px; left:0; right:0; text-align:center;
+    font-size:27px; color:#a9c9ce; opacity:0; }
+  .tc-underline { position:absolute; top:640px; left:50%; transform:translateX(-50%); width:0;
+    height:5px; background:linear-gradient(90deg,#22d3ee,#06b6d4); border-radius:3px; }
+
+  /* ---------- SCENE : AGENTIC BEHAVIOR ---------- */
+  .ag-flow { position:absolute; top:180px; left:0; right:0; text-align:center; opacity:0;
+    font-size:22px; font-weight:700; color:#5f8a91; }
+  .ag-flow span.hi { color:#67e8f9; }
+  .ag-split { position:absolute; top:250px; left:80px; right:80px; height:440px; display:flex; gap:36px; }
+  .ag-panel { flex:1; background:#08181c; border:1px solid #123f47; border-radius:18px; padding:30px;
+    opacity:0; transform:translateY(20px); }
+  .ag-panel.bad { border-color:#7c2d2d; }
+  .ag-panel.good { border-color:#0e7490; }
+  .ag-panel .tag { display:inline-block; font-size:14px; font-weight:800; letter-spacing:2px;
+    border-radius:8px; padding:6px 12px; margin-bottom:16px; }
+  .ag-panel.bad .tag { color:#fca5a5; background:rgba(239,68,68,0.15); }
+  .ag-panel.good .tag { color:#67e8f9; background:rgba(34,211,238,0.15); }
+  .ag-panel h3 { font-size:23px; font-weight:800; color:#e0fbff; margin-bottom:16px; }
+  .ag-field { font-family:monospace; font-size:17px; color:#a9c9ce; margin:8px 0; }
+  .ag-field b { color:#fca5a5; }
+  .ag-panel.good .ag-field b { color:#5eead4; }
+  .ag-reasoning { margin-top:16px; font-size:16px; line-height:1.55; color:#cdeef2; font-style:italic; }
+  .ag-verdict { position:absolute; top:710px; left:0; right:0; text-align:center; opacity:0; }
+  .ag-verdict .ag-pill { display:inline-block; background:rgba(34,211,238,0.16); border:1px solid #06b6d4;
+    border-radius:999px; padding:12px 30px; font-size:19px; font-weight:800; letter-spacing:2px; color:#a5f3fc; }
+  .ag-caption { position:absolute; top:790px; left:140px; right:140px; text-align:center;
+    font-size:24px; color:#a9c9ce; line-height:1.6; opacity:0; }
+
+  /* ---------- generic box-diagram pieces (architecture scene) ---------- */
+  .box {
+    position:absolute; background:#120c1f; border:1px solid #4c2e82; border-radius:16px;
+    display:flex; align-items:center; gap:14px; padding:0 22px; opacity:0; transform:scale(0.85);
+  }
+  .box { background:#08181c; border-color:#145e66; }
+  .box .ic { width:44px; height:44px; border-radius:12px; background:#0b2b30; display:flex; align-items:center; justify-content:center; flex:none; }
+  .box .ic svg { width:24px; height:24px; stroke:#67e8f9; }
+  .box .tx { font-size:20px; font-weight:700; color:#e0fbff; line-height:1.25; }
+  .box .tx small { display:block; font-size:14px; font-weight:500; color:#5f8a91; }
+
+  svg.arrows { position:absolute; inset:0; width:1080px; height:1080px; }
+  svg.arrows path.line { fill:none; stroke:#06b6d4; stroke-width:2.5; opacity:0.75;
+    stroke-dasharray:600; stroke-dashoffset:600; }
+  svg.arrows path.dashed { stroke-dasharray:6 8; opacity:0.55; }
+  .arrow-lbl { position:absolute; font-size:15px; font-weight:700; color:#67e8f9;
+    background:#061519; padding:2px 8px; border-radius:6px; opacity:0; }
+
+  /* ---------- SCENE : SEQUENCE DIAGRAM ---------- */
+  .lane { position:absolute; top:280px; bottom:60px; width:2px; background:linear-gradient(#145e66,#145e66 70%,transparent);
+    opacity:0; }
+  .lane-head { position:absolute; top:190px; width:150px; margin-left:-75px; text-align:center; opacity:0; transform:translateY(-8px); }
+  .lane-head .ic { width:46px; height:46px; margin:0 auto 8px; border-radius:12px; background:#0b2b30; border:1px solid #145e66;
+    display:flex; align-items:center; justify-content:center; }
+  .lane-head .ic svg { width:24px; height:24px; stroke:#67e8f9; }
+  .lane-head .lbl { font-size:15px; font-weight:700; color:#e0fbff; line-height:1.2; }
+  .msg { position:absolute; opacity:0; }
+  .msg .arrowline { position:absolute; height:2px; background:#22d3ee; top:18px; }
+  .msg .arrowline.ret { background:#4f7a82; }
+  .msg .arrowhead { position:absolute; top:12px; width:0; height:0; border-top:6px solid transparent; border-bottom:6px solid transparent; }
+  .msg .arrowhead.right { border-left:9px solid #22d3ee; }
+  .msg .arrowhead.left { border-right:9px solid #4f7a82; }
+  .msg .lbl { position:absolute; top:-16px; font-size:14.5px; font-weight:700; color:#b6f0f5; white-space:nowrap; }
+  .msg .step { position:absolute; top:8px; left:-34px; font-size:13px; font-weight:800; color:#3d6b73;
+    width:24px; height:24px; border:1px solid #145e66; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .loop { position:absolute; width:70px; height:34px; border:2px solid #22d3ee; border-right:none; border-radius:30px 0 0 30px; opacity:0; }
+  .loop-lbl { position:absolute; width:260px; text-align:right; font-size:14.5px; font-weight:700; color:#b6f0f5; opacity:0; }
+
+  /* ---------- SCENE : HERO / fan overview ---------- */
+  .eyebrow { position:absolute; top:64px; left:0; right:0; text-align:center;
+    font-size:22px; font-weight:700; letter-spacing:6px; color:#22d3ee; opacity:0; }
+  .badge {
+    position:absolute; top:120px; left:50%; transform:translateX(-50%) scale(0.4);
+    width:70px; height:70px; border-radius:18px;
+    background:linear-gradient(135deg,#22d3ee,#0e7490);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 18px 44px rgba(34,211,238,0.45); opacity:0;
+  }
+  .badge svg { width:34px; height:34px; }
+  .hero-title { position:absolute; top:212px; left:0; right:0; text-align:center; opacity:0; }
+  .hero-title .big { font-size:64px; font-weight:800; letter-spacing:-1px; }
+  .hero-title .accent { color:#2dd4bf; }
+  .underline { position:absolute; top:302px; left:50%; transform:translateX(-50%); width:0;
+    height:5px; background:linear-gradient(90deg,#22d3ee,#06b6d4); border-radius:3px; }
+  .fanwrap { position:absolute; top:330px; left:0; right:0; height:380px; }
+  svg.lines { position:absolute; inset:0; width:1080px; height:380px; }
+  svg.lines path { fill:none; stroke:#06b6d4; stroke-width:2; opacity:0.55;
+    stroke-dasharray:500; stroke-dashoffset:500; }
+  .node { position:absolute; top:338px; width:150px; text-align:center; opacity:0; transform:translateY(14px); }
+  .node .ic { width:74px; height:74px; margin:0 auto 12px; border-radius:18px; background:#0a2126; border:1px solid #145e66;
+    display:flex; align-items:center; justify-content:center; }
+  .node .ic svg { width:32px; height:32px; stroke:#67e8f9; }
+  .node .lbl { font-size:19px; font-weight:700; color:#e0fbff; }
+  .subtitle { position:absolute; left:140px; right:140px; text-align:center; font-size:26px; color:#a9c9ce; line-height:1.6; opacity:0; }
+  .pill { position:absolute; left:50%; transform:translateX(-50%) scale(0.7);
+    background:rgba(34,211,238,0.16); border:1px solid #06b6d4; border-radius:999px;
+    padding:14px 34px; font-size:21px; font-weight:800; letter-spacing:2px; color:#a5f3fc; opacity:0; }
+  .cta { position:absolute; left:0; right:0; text-align:center; font-size:24px; color:#22d3ee; font-weight:600; opacity:0; }
+
+  /* ---------- SCENE : IaC + Contabo ---------- */
+  .split { position:absolute; top:200px; left:80px; right:80px; height:520px; display:flex; gap:40px; }
+  .panel { flex:1; background:#061619; border:1px solid #123f47; border-radius:18px; padding:32px;
+    opacity:0; transform:translateY(20px); }
+  .panel h3 { font-size:25px; font-weight:800; color:#e0fbff; margin-bottom:16px; }
+  .panel .tag { display:inline-block; font-size:15px; font-weight:700; letter-spacing:2px;
+    color:#22d3ee; background:rgba(6,182,212,0.15); border-radius:8px; padding:6px 12px; margin-bottom:14px; }
+  .panel .file { font-family:monospace; font-size:18px; color:#5f8a91; margin:7px 0; padding-left:14px;
+    border-left:2px solid #145e66; }
+  .panel .file.hi { color:#a5f3fc; font-weight:700; border-left-color:#22d3ee; }
+  .contabo-strip { position:absolute; top:750px; left:80px; right:80px; background:#08181c; border:1px solid #145e66;
+    border-radius:14px; padding:20px 26px; display:flex; align-items:center; gap:18px; opacity:0; transform:translateY(16px); }
+  .contabo-strip .ic { width:46px; height:46px; border-radius:12px; background:#0b2b30; display:flex; align-items:center; justify-content:center; flex:none; }
+  .contabo-strip .ic svg { width:24px; height:24px; stroke:#67e8f9; }
+  .contabo-strip .tx { font-size:18px; color:#e0fbff; font-weight:600; }
+  .contabo-strip .tx b { color:#a5f3fc; }
+
+  /* ---------- SCENE : OUTRO ---------- */
+  .outro-logo { position:absolute; top:340px; left:0; right:0; text-align:center; opacity:0; }
+  .outro-logo .eyebrow2 { font-size:22px; font-weight:800; letter-spacing:6px; color:#22d3ee; }
+  .outro-logo .big { font-size:88px; font-weight:800; letter-spacing:-1px; margin-top:14px; }
+  .outro-status { position:absolute; top:540px; left:0; right:0; text-align:center; opacity:0; }
+  .dot { display:inline-block; width:12px; height:12px; border-radius:50%; background:#4ade80;
+    margin-right:10px; box-shadow:0 0 12px #4ade80; }
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <!-- ============ SCENE 1 : TITLE CARD (0 - 6s) ============ -->
+  <div class="scene" id="s1">
+    <div class="tc-eyebrow">ZOHO CATALYST 3.0</div>
+    <div class="tc-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.3-2A5 5 0 0 0 6 19h11.5z"/></svg>
+    </div>
+    <div class="tc-title"><span class="big">CommerceFlow</span></div>
+    <div class="tc-underline" id="tcul"></div>
+    <div class="tc-tagline">Agentic Commerce, Verified Live</div>
+  </div>
+
+  <!-- ============ SCENE 2 : AGENTIC BEHAVIOR (6 - 20s) ============ -->
+  <div class="scene" id="s2">
+    <div class="scene-title"><div class="l1">THE AGENTIC LAYER</div><div class="l2">Not a chatbot. Orchestration.</div></div>
+    <div class="ag-flow">customer intent <span class="hi">&rarr;</span> catalogue tools <span class="hi">&rarr;</span> Claude tool loop <span class="hi">&rarr;</span> purchase plan</div>
+
+    <div class="ag-split">
+      <div class="ag-panel bad" id="agp1">
+        <div class="tag">MODEL PROPOSED</div>
+        <h3>Propose a cart</h3>
+        <div class="ag-field">items: <b>"desk + chair + lamp"</b></div>
+        <div class="ag-field">total: <b>null</b></div>
+        <div class="ag-field">payment: <b>null</b></div>
+        <div class="ag-reasoning">The model can plan the bundle, but it cannot set the price.</div>
+      </div>
+      <div class="ag-panel good" id="agp2">
+        <div class="tag">SERVER VERIFIED</div>
+        <h3>Approve the cart</h3>
+        <div class="ag-field">accept: <b>false</b></div>
+        <div class="ag-reasoning">"'INVOICE' is clearly the document heading, not the vendor. The actual vendor is 'Acme Supplies Ltd' — and total/tax were present in the customer intent but never extracted."</div>
+      </div>
+    </div>
+
+    <div class="ag-verdict"><span class="ag-pill">A TRUST BOUNDARY, SHOWN LIVE</span></div>
+    <div class="ag-caption">The model chooses tools. Catalyst enforces the transaction. Every step is observable.</div>
+  </div>
+
+  <!-- ============ SCENE 3 : ARCHITECTURE DIAGRAM ============ -->
+  <div class="scene" id="s3">
+    <div class="scene-title"><div class="l1">SYSTEM ARCHITECTURE</div><div class="l2">One Agent, Five Trust Boundaries</div></div>
+
+    <svg class="arrows" id="archsvg">
+      <path class="line" id="a1" d="M540,254 L540,320"/>
+      <path class="line" id="a2" d="M500,396 C420,430 300,460 230,490"/>
+      <path class="line" id="a3" d="M540,396 L540,490"/>
+      <path class="line" id="a4" d="M580,396 C660,430 780,460 850,490"/>
+      <path class="line" id="a5" d="M850,580 C760,625 640,655 540,680"/>
+      <path class="line" id="a6" d="M540,756 C480,780 420,800 345,820"/>
+      <path class="line" id="a9" d="M460,858 L600,858"/>
+      <path class="line dashed" id="a7" d="M725,820 C820,740 820,620 620,580"/>
+    </svg>
+
+    <div class="box" id="bx-client" style="top:190px; left:440px; width:200px; height:64px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="tx">Customer<small>shopping request</small></div>
+    </div>
+
+    <div class="box" id="bx-api" style="top:320px; left:410px; width:260px; height:76px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/></svg></div>
+      <div class="tx">commerce<small>Catalyst · Advanced I/O</small></div>
+    </div>
+
+    <div class="box" id="bx-stratus" style="top:490px; left:120px; width:220px; height:88px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/></svg></div>
+      <div class="tx">Data Store<small>catalogue + sessions</small></div>
+    </div>
+    <div class="box" id="bx-pg" style="top:490px; left:430px; width:220px; height:88px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div>
+      <div class="tx">Orders + traces<small>Data Store</small></div>
+    </div>
+    <div class="box" id="bx-job" style="top:490px; left:740px; width:220px; height:88px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M6 9v6"/><path d="M9 6h4a4 4 0 0 1 4 4"/><path d="M9 18h4a4 4 0 0 0 4-4"/></svg></div>
+      <div class="tx">Claude tools<small>tool loop</small></div>
+    </div>
+
+    <div class="box" id="bx-worker" style="top:680px; left:410px; width:260px; height:76px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/></svg></div>
+      <div class="tx">Stripe Checkout<small>hosted payment</small></div>
+    </div>
+
+    <div class="box" id="bx-zia" style="top:820px; left:230px; width:230px; height:76px;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div>
+      <div class="tx">Stripe webhook<small>signature verified</small></div>
+    </div>
+    <div class="box" id="bx-judge" style="top:820px; left:600px; width:250px; height:76px; border-color:#0e7490;">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 12v10"/><path d="M3 7l9 5 9-5"/></svg></div>
+      <div class="tx">Claude Catalyst API<small>reasoning + tools</small></div>
+    </div>
+    <div class="arrow-lbl" id="al7" style="top:660px; left:760px;">payment status</div>
+  </div>
+
+  <!-- ============ SCENE 4 : SEQUENCE DIAGRAM ============ -->
+  <div class="scene" id="s4">
+    <div class="scene-title"><div class="l1">TRANSACTION LIFECYCLE</div><div class="l2">One Intent, Ten Steps</div></div>
+
+    <div class="lane-head" style="left:100px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="lbl">Customer</div></div>
+    <div class="lane-head" style="left:270px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/></svg></div><div class="lbl">Catalyst API</div></div>
+    <div class="lane-head" style="left:430px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/></svg></div><div class="lbl">Catalogue</div></div>
+    <div class="lane-head" style="left:590px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div><div class="lbl">Data Store</div></div>
+    <div class="lane-head" style="left:750px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M6 9v6"/><path d="M9 6h4a4 4 0 0 1 4 4"/><path d="M9 18h4a4 4 0 0 0 4-4"/></svg></div><div class="lbl">Claude tools</div></div>
+    <div class="lane-head" style="left:910px; width:150px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div><div class="lbl">Stripe + webhook</div></div>
+    <div class="lane-head" style="left:1030px; width:130px;"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M12 12v10"/><path d="M3 7l9 5 9-5"/></svg></div><div class="lbl">Claude model</div></div>
+
+    <div class="lane" style="left:100px;"></div>
+    <div class="lane" style="left:270px;"></div>
+    <div class="lane" style="left:430px;"></div>
+    <div class="lane" style="left:590px;"></div>
+    <div class="lane" style="left:750px;"></div>
+    <div class="lane" style="left:910px;"></div>
+    <div class="lane" style="left:1030px;"></div>
+
+    <div class="msg" id="m1" style="top:290px; left:100px; width:170px;"><div class="step">1</div><div class="lbl">POST /sessions/:id/chat</div><div class="arrowline" style="left:0; width:170px;"></div><div class="arrowhead right" style="left:164px;"></div></div>
+    <div class="msg" id="m2" style="top:365px; left:270px; width:160px;"><div class="step">2</div><div class="lbl">search_products()</div><div class="arrowline" style="left:0; width:160px;"></div><div class="arrowhead right" style="left:154px;"></div></div>
+    <div class="msg" id="m3" style="top:440px; left:270px; width:320px;"><div class="step">3</div><div class="lbl">propose_cart()</div><div class="arrowline" style="left:0; width:320px;"></div><div class="arrowhead right" style="left:314px;"></div></div>
+    <div class="msg" id="m4" style="top:515px; left:270px; width:480px;"><div class="step">4</div><div class="lbl">confirm_cart()</div><div class="arrowline" style="left:0; width:480px;"></div><div class="arrowhead right" style="left:474px;"></div></div>
+    <div class="msg" id="m5" style="top:590px; left:100px; width:170px;"><div class="step">5</div><div class="lbl">cart confirmed</div><div class="arrowline ret" style="left:0; width:170px;"></div><div class="arrowhead left" style="left:-9px;"></div></div>
+    <div class="msg" id="m6" style="top:665px; left:750px; width:160px;"><div class="step">6</div><div class="lbl">POST /checkout</div><div class="arrowline" style="left:0; width:160px;"></div><div class="arrowhead right" style="left:154px;"></div></div>
+    <div class="msg" id="m7" style="top:735px; left:430px; width:480px;"><div class="step">7</div><div class="lbl">create Stripe Session</div><div class="arrowline ret" style="left:0; width:480px;"></div><div class="arrowhead left" style="left:-9px;"></div></div>
+    <div class="loop" id="loop8" style="top:790px; left:940px;"></div>
+    <div class="loop-lbl" id="m8" style="top:798px; left:600px;">Stripe: payment completed</div>
+    <div class="msg" id="m9" style="top:850px; left:910px; width:120px;"><div class="step">9</div><div class="lbl">verify webhook</div><div class="arrowline" style="left:0; width:120px;"></div><div class="arrowhead right" style="left:114px;"></div></div>
+    <div class="msg" id="m10" style="top:920px; left:590px; width:440px;"><div class="step">10</div><div class="lbl">update (payment status)</div><div class="arrowline ret" style="left:0; width:440px;"></div><div class="arrowhead left" style="left:-9px;"></div></div>
+  </div>
+
+  <!-- ============ SCENE 5 : HERO / ZOHO CLOUD OVERVIEW ============ -->
+  <div class="scene" id="s5">
+    <div class="eyebrow">A BUILD BY YUVARAJ ARAVINDAN</div>
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.3-2A5 5 0 0 0 6 19h11.5z"/></svg>
+    </div>
+    <div class="hero-title"><span class="big">CommerceFlow on Catalyst <span class="accent">3.0</span></span></div>
+    <div class="underline" id="ul"></div>
+
+    <div class="fanwrap">
+      <svg class="lines" viewBox="0 0 1080 380" id="linesvg">
+        <path id="p0" d="M540,10 C420,70 260,110 90,140"/>
+        <path id="p1" d="M540,10 C480,80 330,120 258,140"/>
+        <path id="p2" d="M540,10 C540,80 480,120 430,140"/>
+        <path id="p3" d="M540,10 C540,80 600,120 650,140"/>
+        <path id="p4" d="M540,10 C600,80 750,120 822,140"/>
+        <path id="p5" d="M540,10 C660,70 830,110 990,140"/>
+      </svg>
+      <div class="node" style="left:14px;">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <div class="lbl">AppSail</div>
+      </div>
+      <div class="node" style="left:182px;">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg></div>
+        <div class="lbl">Catalogue</div>
+      </div>
+      <div class="node" style="left:354px;">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M6 9v6"/><path d="M9 6h4a4 4 0 0 1 4 4"/><path d="M9 18h4a4 4 0 0 0 4-4"/></svg></div>
+        <div class="lbl">Claude tools</div>
+      </div>
+      <div class="node" style="left:526px;">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div>
+        <div class="lbl">Zia OCR</div>
+      </div>
+      <div class="node" style="left:698px;">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/></svg></div>
+        <div class="lbl">Contabo VPS</div>
+      </div>
+      <div class="node" style="left:870px;">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></div>
+        <div class="lbl">OpenTofu</div>
+      </div>
+    </div>
+
+    <div class="subtitle" style="top:800px;">Two agents, one pipeline — Catalyst API and Worker, wired end to<br>end on live Zoho Catalyst infrastructure.</div>
+    <div class="pill" style="top:900px;">2 AGENTS · 5 SERVICES</div>
+    <div class="cta" style="top:970px;">Source + demo in the comments ↓</div>
+  </div>
+
+  <!-- ============ SCENE 6 : IaC + Contabo ============ -->
+  <div class="scene" id="s6">
+    <div class="scene-title"><div class="l1">BUSINESS USE CASES</div><div class="l2">One Agent Pattern, Many Domains</div></div>
+    <div class="split">
+      <div class="panel" id="pan1">
+        <div class="tag">SHOPPER</div>
+        <h3>retail / travel / B2B</h3>
+        <div class="file">├── modules/</div>
+        <div class="file">├── aws/</div>
+        <div class="file">├── azure/</div>
+        <div class="file hi">└── gcp/</div>
+      </div>
+      <div class="panel" id="pan2">
+        <div class="tag">MERCHANT</div>
+        <h3>catalog · cart · checkout</h3>
+        <div class="file">└── catalyst/</div>
+        <div class="file">&nbsp;&nbsp;&nbsp;&nbsp;├── appsail/api/</div>
+        <div class="file hi">&nbsp;&nbsp;&nbsp;&nbsp;└── appsail/worker/</div>
+      </div>
+    </div>
+    <div class="contabo-strip" id="contabo">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="2"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/></svg></div>
+      <div class="tx">Data Store self-hosted on <b>Contabo</b> — Tier-1 portable, not tied to Catalyst's Data Store</div>
+    </div>
+    <div class="subtitle" style="top:940px;">Same orchestration pattern, different catalogues and policies.</div>
+  </div>
+
+  <!-- ============ SCENE 7 : OUTRO ============ -->
+  <div class="scene" id="s7">
+    <div class="outro-logo"><div class="eyebrow2">ZOHO CATALYST 3.0</div><span class="big">CommerceFlow</span></div>
+    <div class="outro-status"><span class="dot"></span><span style="font-size:24px;color:#a9c9ce;">Live · Claude + Catalyst + Stripe</span></div>
+    <div class="pill" style="top:648px;">LIVE TRANSACTION TRACE</div>
+    <div class="cta" style="top:748px; font-size:30px;">Source + demo in the comments ↓</div>
+  </div>
+
+</div>
+
+<script>
+function fadeIn(el, opts) {
+  opts = opts || {};
+  el.style.transition = (opts.t || 'opacity .5s, transform .5s');
+  el.style.opacity = 1;
+  if (opts.tf) el.style.transform = opts.tf;
+}
+function draw(el) { el.style.transition = 'stroke-dashoffset .6s ease-out'; el.style.strokeDashoffset = '0'; }
+function hide(el) { el.style.transition = 'opacity .4s'; el.style.opacity = 0; }
+function show(el) { el.style.transition = 'opacity .4s'; el.style.opacity = 1; }
+
+function animate() {
+  const tl = [];
+
+  // ===== SCENE 1 : TITLE CARD (0 - 6s) =====
+  tl.push([0.2, () => fadeIn(document.querySelector('.tc-eyebrow'))]);
+  tl.push([0.6, () => fadeIn(document.querySelector('.tc-badge'), {t:'opacity .5s, transform .5s cubic-bezier(.34,1.56,.64,1)', tf:'translateX(-50%) scale(1)'})]);
+  tl.push([1.0, () => fadeIn(document.querySelector('.tc-title'))]);
+  tl.push([1.4, () => { const u=document.getElementById('tcul'); u.style.transition='width .6s ease-out'; u.style.width='280px'; }]);
+  tl.push([1.7, () => fadeIn(document.querySelector('.tc-tagline'))]);
+  tl.push([5.6, () => hide(document.getElementById('s1'))]);
+
+  // ===== SCENE 2 : AGENTIC BEHAVIOR (6 - 20s) =====
+  tl.push([6.1, () => show(document.getElementById('s2'))]);
+  tl.push([6.2, () => fadeIn(document.querySelector('#s2 .scene-title'))]);
+  tl.push([6.7, () => fadeIn(document.querySelector('.ag-flow'))]);
+  tl.push([7.3, () => fadeIn(document.getElementById('agp1'), {tf:'translateY(0)'})]);
+  tl.push([7.9, () => fadeIn(document.getElementById('agp2'), {tf:'translateY(0)'})]);
+  tl.push([9.5, () => fadeIn(document.querySelector('.ag-verdict'))]);
+  tl.push([10.2, () => fadeIn(document.querySelector('.ag-caption'))]);
+  tl.push([19.5, () => hide(document.getElementById('s2'))]);
+
+  // ===== SCENE 3 : ARCHITECTURE DIAGRAM (20 - 33s) =====
+  tl.push([20.1, () => show(document.getElementById('s3'))]);
+  tl.push([20.2, () => fadeIn(document.querySelector('#s3 .scene-title'))]);
+  const boxes3 = ['bx-client','bx-api','bx-stratus','bx-pg','bx-job','bx-worker','bx-zia','bx-judge'];
+  boxes3.forEach((id,i)=>{ tl.push([20.6 + i*0.5, () => fadeIn(document.getElementById(id), {tf:'scale(1)'})]); });
+  const arrows3 = ['a1','a2','a3','a4','a5','a6','a9'];
+  arrows3.forEach((id,i)=>{ tl.push([21.2 + i*0.5, () => draw(document.getElementById(id))]); });
+  tl.push([25.0, () => draw(document.getElementById('a7'))]);
+  tl.push([25.2, () => fadeIn(document.getElementById('al7'))]);
+  tl.push([32.5, () => hide(document.getElementById('s3'))]);
+
+  // ===== SCENE 4 : SEQUENCE DIAGRAM (33 - 50s) =====
+  tl.push([33.1, () => show(document.getElementById('s4'))]);
+  tl.push([33.2, () => fadeIn(document.querySelector('#s4 .scene-title'))]);
+  document.querySelectorAll('#s4 .lane-head').forEach((n,i)=>{ tl.push([33.6 + i*0.12, () => fadeIn(n, {tf:'translateY(0)'})]); });
+  document.querySelectorAll('#s4 .lane').forEach((n,i)=>{ tl.push([34.4 + i*0.08, () => fadeIn(n, {t:'opacity .4s'})]); });
+  const msgs = ['m1','m2','m3','m4','m5','m6','m7'];
+  msgs.forEach((id,i)=>{ tl.push([35.2 + i*1.4, () => fadeIn(document.getElementById(id), {t:'opacity .4s'})]); });
+  tl.push([35.2 + 7*1.4, () => { fadeIn(document.getElementById('loop8'), {t:'opacity .4s'}); fadeIn(document.getElementById('m8'), {t:'opacity .4s'}); }]);
+  tl.push([35.2 + 8*1.4, () => fadeIn(document.getElementById('m9'), {t:'opacity .4s'})]);
+  tl.push([35.2 + 9*1.4, () => fadeIn(document.getElementById('m10'), {t:'opacity .4s'})]);
+  tl.push([49.5, () => hide(document.getElementById('s4'))]);
+
+  // ===== SCENE 5 : HERO / ZOHO CLOUD OVERVIEW (50 - 60s) =====
+  tl.push([50.1, () => show(document.getElementById('s5'))]);
+  tl.push([50.3, () => fadeIn(document.querySelector('#s5 .eyebrow'))]);
+  tl.push([50.6, () => fadeIn(document.querySelector('#s5 .badge'), {t:'opacity .5s, transform .5s cubic-bezier(.34,1.56,.64,1)', tf:'translateX(-50%) scale(1)'})]);
+  tl.push([51.0, () => fadeIn(document.querySelector('#s5 .hero-title'))]);
+  tl.push([51.4, () => { const u=document.getElementById('ul'); u.style.transition='width .6s ease-out'; u.style.width='300px'; }]);
+  ["p0","p1","p2","p3","p4","p5"].forEach((id,i)=>{ tl.push([51.8 + i*0.2, () => draw(document.getElementById(id))]); });
+  document.querySelectorAll('#s5 .node').forEach((n,i)=>{ tl.push([52.1 + i*0.2, () => fadeIn(n, {tf:'translateY(0)'})]); });
+  tl.push([54.0, () => fadeIn(document.querySelector('#s5 .subtitle'))]);
+  tl.push([54.6, () => fadeIn(document.querySelector('#s5 .pill'), {t:'opacity .5s, transform .5s cubic-bezier(.34,1.56,.64,1)', tf:'translateX(-50%) scale(1)'})]);
+  tl.push([55.1, () => fadeIn(document.querySelector('#s5 .cta'))]);
+  tl.push([59.5, () => hide(document.getElementById('s5'))]);
+
+  // ===== SCENE 6 : IaC + Contabo (60 - 70s) =====
+  tl.push([60.1, () => show(document.getElementById('s6'))]);
+  tl.push([60.2, () => fadeIn(document.querySelector('#s6 .scene-title'))]);
+  tl.push([60.7, () => fadeIn(document.getElementById('pan1'), {tf:'translateY(0)'})]);
+  tl.push([61.1, () => fadeIn(document.getElementById('pan2'), {tf:'translateY(0)'})]);
+  tl.push([61.9, () => fadeIn(document.getElementById('contabo'), {tf:'translateY(0)'})]);
+  tl.push([62.5, () => fadeIn(document.querySelector('#s6 .subtitle'))]);
+  tl.push([69.5, () => hide(document.getElementById('s6'))]);
+
+  // ===== SCENE 7 : OUTRO (70 - 76s) =====
+  tl.push([70.1, () => show(document.getElementById('s7'))]);
+  tl.push([70.3, () => fadeIn(document.querySelector('#s7 .outro-logo'))]);
+  tl.push([70.9, () => fadeIn(document.querySelector('#s7 .outro-status'))]);
+  tl.push([71.4, () => fadeIn(document.querySelector('#s7 .pill'), {t:'opacity .5s, transform .5s cubic-bezier(.34,1.56,.64,1)', tf:'translateX(-50%) scale(1)'})]);
+  tl.push([71.9, () => fadeIn(document.querySelector('#s7 .cta'))]);
+
+  const t0 = performance.now();
+  function tick() {
+    const t = (performance.now() - t0) / 1000;
+    while (tl.length && tl[0][0] <= t) { tl.shift()[1](); }
+    if (tl.length) requestAnimationFrame(tick);
+    else window.__DONE__ = true;
+  }
+  requestAnimationFrame(tick);
+}
+animate();
+</script>
+</body>
+</html>
