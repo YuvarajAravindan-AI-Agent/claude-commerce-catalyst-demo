@@ -1,0 +1,17 @@
+{
+  "name": "claude-commerce-demo",
+  "version": "1.0.0",
+  "description": "Headless commerce demo on Zoho Catalyst. A shopping request becomes a tool-driven cart, a Stripe Checkout Session, and an observable transaction trace. It is safe to demo without secrets using the in-memory catalogue and `DEMO_MOCK_PAYMENTS=true`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "playwright": "^1.62.1"
+  }
+}

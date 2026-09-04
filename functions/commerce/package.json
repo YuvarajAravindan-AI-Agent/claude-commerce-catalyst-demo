@@ -1,0 +1,9 @@
+{
+	"name": "commerce",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "yuvarajaravindan@ai-agentic-enterprises.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}

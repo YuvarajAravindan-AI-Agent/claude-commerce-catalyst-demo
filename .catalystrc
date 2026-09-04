@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "68186000000021002",
+      "name": "claude-commerce-demo",
+      "domain": {
+        "id": "50045570004",
+        "name": "claude-commerce-demo-60086011005.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60086011005",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

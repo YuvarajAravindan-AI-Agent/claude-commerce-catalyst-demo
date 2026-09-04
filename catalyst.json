@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "targets": [
+      "commerce",
+      "stripe_webhook"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "slate": [
+    {
+      "name": "commerce-demo-ui",
+      "source": "/home/yuvaraj/Projects/claude-commerce-demo/commerce-demo-ui"
+    }
+  ]
+}
