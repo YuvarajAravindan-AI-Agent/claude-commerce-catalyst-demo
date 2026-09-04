@@ -2,6 +2,7 @@ node_modules/
 **/node_modules/
 dist/
 promo/frames/
+promo/recordings/
 .env
 .env.*
 !.env.example
